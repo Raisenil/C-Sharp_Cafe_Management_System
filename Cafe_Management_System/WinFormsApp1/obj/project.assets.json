@@ -146,9 +146,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\WinFormsApp1.csproj",
-      "projectName": "WinFormsApp1",
-      "projectPath": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\CafeManagement.csproj",
+      "projectName": "CafeManagement",
+      "projectPath": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\CafeManagement.csproj",
       "packagesPath": "C:\\Users\\raisu\\.nuget\\packages\\",
       "outputPath": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",

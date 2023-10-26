@@ -28,6 +28,12 @@ namespace WinFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if(txtUsername.Text == "Admin" && txtPassword.Text == "admin")
+            {
+                Dashboard ds = new Dashboard("Admin");
+                ds.Show();
+                this.Hide();
+            }
         }
 
         private void btnGuest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

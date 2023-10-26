@@ -44,11 +44,16 @@
             btnRemove = new Guna.UI2.WinForms.Guna2Button();
             btnAddItems = new Guna.UI2.WinForms.Guna2Button();
             btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            uC_Welcome1 = new CafeManagement.AllUserControls.UC_Welcome();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -59,7 +64,7 @@
             panel1.Controls.Add(btnRemove);
             panel1.Controls.Add(btnAddItems);
             panel1.Controls.Add(btnUpdate);
-            panel1.Controls.Add(guna2Button1);
+            panel1.Controls.Add(btnPlaceOrder);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 514);
@@ -160,31 +165,32 @@
             btnUpdate.TabIndex = 1;
             btnUpdate.Text = "Update Item";
             // 
-            // guna2Button1
+            // btnPlaceOrder
             // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            guna2Button1.CheckedState.FillColor = Color.White;
-            guna2Button1.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
-            guna2Button1.CustomizableEdges = customizableEdges8;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(0, 118, 225);
-            guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(31, 114);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2Button1.Size = new Size(202, 41);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Place Order";
-            guna2Button1.Click += guna2Button1_Click;
+            btnPlaceOrder.BorderRadius = 15;
+            btnPlaceOrder.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btnPlaceOrder.CheckedState.FillColor = Color.White;
+            btnPlaceOrder.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
+            btnPlaceOrder.CustomizableEdges = customizableEdges8;
+            btnPlaceOrder.DisabledState.BorderColor = Color.DarkGray;
+            btnPlaceOrder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPlaceOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPlaceOrder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPlaceOrder.FillColor = Color.FromArgb(0, 118, 225);
+            btnPlaceOrder.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPlaceOrder.ForeColor = Color.White;
+            btnPlaceOrder.Location = new Point(31, 114);
+            btnPlaceOrder.Name = "btnPlaceOrder";
+            btnPlaceOrder.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnPlaceOrder.Size = new Size(202, 41);
+            btnPlaceOrder.TabIndex = 0;
+            btnPlaceOrder.Text = "Place Order";
+            btnPlaceOrder.Click += btnPlaceOrder_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(uC_Welcome1);
             panel2.Location = new Point(211, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(781, 514);
@@ -200,6 +206,26 @@
             guna2Elipse2.BorderRadius = 30;
             guna2Elipse2.TargetControl = panel2;
             // 
+            // guna2Elipse3
+            // 
+            guna2Elipse3.BorderRadius = 30;
+            // 
+            // guna2Elipse4
+            // 
+            guna2Elipse4.BorderRadius = 30;
+            // 
+            // guna2Elipse5
+            // 
+            guna2Elipse5.BorderRadius = 30;
+            // 
+            // uC_Welcome1
+            // 
+            uC_Welcome1.BackColor = Color.White;
+            uC_Welcome1.Location = new Point(-3, 0);
+            uC_Welcome1.Name = "uC_Welcome1";
+            uC_Welcome1.Size = new Size(781, 514);
+            uC_Welcome1.TabIndex = 0;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -214,6 +240,7 @@
             Text = "Dashboard";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -224,10 +251,14 @@
         private Guna.UI2.WinForms.Guna2Button btnRemove;
         private Guna.UI2.WinForms.Guna2Button btnAddItems;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnPlaceOrder;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private LinkLabel btnLogOut;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private CafeManagement.AllUserControls.UC_Welcome uC_Welcome1;
     }
 }

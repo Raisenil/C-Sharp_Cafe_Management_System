@@ -39,8 +39,8 @@
             label1 = new Label();
             label2 = new Label();
             txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            linkLabel1 = new LinkLabel();
+            btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            btnGuest = new LinkLabel();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -102,41 +102,41 @@
             txtUsername.TabIndex = 3;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
-            // guna2Button1
+            // btnLogin
             // 
-            guna2Button1.BorderRadius = 20;
-            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            guna2Button1.CheckedState.FillColor = Color.White;
-            guna2Button1.CheckedState.ForeColor = Color.FromArgb(0, 118, 221);
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(0, 118, 221);
-            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(93, 401);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(180, 45);
-            guna2Button1.TabIndex = 5;
-            guna2Button1.Text = "Login";
-            guna2Button1.Click += btnLogin_Click;
+            btnLogin.BorderRadius = 20;
+            btnLogin.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            btnLogin.CheckedState.FillColor = Color.White;
+            btnLogin.CheckedState.ForeColor = Color.FromArgb(0, 118, 221);
+            btnLogin.CustomizableEdges = customizableEdges9;
+            btnLogin.DisabledState.BorderColor = Color.DarkGray;
+            btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogin.FillColor = Color.FromArgb(0, 118, 221);
+            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(93, 401);
+            btnLogin.Name = "btnLogin";
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnLogin.Size = new Size(180, 45);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_Click;
             // 
-            // linkLabel1
+            // btnGuest
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel1.LinkColor = Color.Lime;
-            linkLabel1.Location = new Point(115, 471);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(136, 21);
-            linkLabel1.TabIndex = 6;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Continue as Guest";
-            linkLabel1.LinkClicked += btnGuest_LinkClicked;
+            btnGuest.AutoSize = true;
+            btnGuest.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuest.LinkBehavior = LinkBehavior.NeverUnderline;
+            btnGuest.LinkColor = Color.Lime;
+            btnGuest.Location = new Point(115, 471);
+            btnGuest.Name = "btnGuest";
+            btnGuest.Size = new Size(136, 21);
+            btnGuest.TabIndex = 6;
+            btnGuest.TabStop = true;
+            btnGuest.Text = "Continue as Guest";
+            btnGuest.LinkClicked += btnGuest_LinkClicked;
             // 
             // txtPassword
             // 
@@ -168,8 +168,8 @@
             BackColor = Color.FromArgb(41, 44, 51);
             ClientSize = new Size(373, 540);
             Controls.Add(txtPassword);
-            Controls.Add(linkLabel1);
-            Controls.Add(guna2Button1);
+            Controls.Add(btnGuest);
+            Controls.Add(btnLogin);
             Controls.Add(txtUsername);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -189,8 +189,8 @@
         private Label label1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private LinkLabel linkLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private LinkLabel btnGuest;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
 }

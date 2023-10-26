@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+n0/NufVfpaLHNjvVYuyfFbXySsI9sr9kOEe7zg50nBslWTMnEZVNUQqAra9J1r/7HFrH3JeRV06xVqDAy6UhA==",
+  "dgSpecHash": "EfFM6cwDbhYNq0PTU7PEvIZh/C33k9ghvShQ6MFHtmF9RjOgGaXJ20IhOB7ycntjpbqXaWzQa9oChu9LMgPJmQ==",
   "success": true,
-  "projectFilePath": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "D:\\Study\\C#\\C-Sharp_Cafe_Management_System\\Cafe_Management_System\\WinFormsApp1\\CafeManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raisu\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.5\\guna.ui2.winforms.2.0.4.5.nupkg.sha512",
     "C:\\Users\\raisu\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",

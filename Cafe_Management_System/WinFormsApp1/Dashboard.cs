@@ -23,9 +23,17 @@ namespace WinFormsApp1
 
             if (user == "Guest")
             {
+                btnPlaceOrder.Show();
                 btnAddItems.Hide();
                 btnUpdate.Hide();
                 btnRemove.Hide();
+            }
+            else if (user == "Admin")
+            {
+                btnPlaceOrder.Show();
+                btnAddItems.Show();
+                btnUpdate.Show();
+                btnRemove.Show();
             }
         }
 
@@ -34,7 +42,7 @@ namespace WinFormsApp1
             Application.Exit();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
 
         }

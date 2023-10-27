@@ -46,12 +46,14 @@
             btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            uC_Additems1 = new CafeManagement.AllUserControls.UC_Additems();
+            uC_Welcome1 = new CafeManagement.AllUserControls.UC_Welcome();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            uC_Welcome1 = new CafeManagement.AllUserControls.UC_Welcome();
+            guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -143,6 +145,7 @@
             btnAddItems.Size = new Size(202, 41);
             btnAddItems.TabIndex = 2;
             btnAddItems.Text = "Add Items";
+            btnAddItems.Click += btnAddItems_Click;
             // 
             // btnUpdate
             // 
@@ -190,11 +193,28 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(uC_Additems1);
             panel2.Controls.Add(uC_Welcome1);
             panel2.Location = new Point(211, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(781, 514);
             panel2.TabIndex = 1;
+            // 
+            // uC_Additems1
+            // 
+            uC_Additems1.BackColor = Color.White;
+            uC_Additems1.Location = new Point(3, 0);
+            uC_Additems1.Name = "uC_Additems1";
+            uC_Additems1.Size = new Size(781, 514);
+            uC_Additems1.TabIndex = 1;
+            // 
+            // uC_Welcome1
+            // 
+            uC_Welcome1.BackColor = Color.White;
+            uC_Welcome1.Location = new Point(-3, 0);
+            uC_Welcome1.Name = "uC_Welcome1";
+            uC_Welcome1.Size = new Size(781, 514);
+            uC_Welcome1.TabIndex = 0;
             // 
             // guna2Elipse1
             // 
@@ -218,13 +238,10 @@
             // 
             guna2Elipse5.BorderRadius = 30;
             // 
-            // uC_Welcome1
+            // guna2Elipse6
             // 
-            uC_Welcome1.BackColor = Color.White;
-            uC_Welcome1.Location = new Point(-3, 0);
-            uC_Welcome1.Name = "uC_Welcome1";
-            uC_Welcome1.Size = new Size(781, 514);
-            uC_Welcome1.TabIndex = 0;
+            guna2Elipse6.BorderRadius = 30;
+            guna2Elipse6.TargetControl = panel2;
             // 
             // Dashboard
             // 
@@ -238,6 +255,7 @@
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -260,5 +278,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private CafeManagement.AllUserControls.UC_Welcome uC_Welcome1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private CafeManagement.AllUserControls.UC_Additems uC_Additems1;
     }
 }

@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -44,6 +45,7 @@
             txtCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             txtItemName = new Guna.UI2.WinForms.Guna2TextBox();
             txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             SuspendLayout();
             // 
             // label1
@@ -89,7 +91,7 @@
             // btnAddItems
             // 
             btnAddItems.BorderRadius = 21;
-            btnAddItems.CustomizableEdges = customizableEdges9;
+            btnAddItems.CustomizableEdges = customizableEdges1;
             btnAddItems.DisabledState.BorderColor = Color.DarkGray;
             btnAddItems.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddItems.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -99,15 +101,16 @@
             btnAddItems.ForeColor = Color.White;
             btnAddItems.Location = new Point(300, 396);
             btnAddItems.Name = "btnAddItems";
-            btnAddItems.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAddItems.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnAddItems.Size = new Size(180, 45);
             btnAddItems.TabIndex = 4;
             btnAddItems.Text = "Add Item";
+            btnAddItems.Click += btnAddItems_Click;
             // 
             // txtCategory
             // 
             txtCategory.BackColor = Color.Transparent;
-            txtCategory.CustomizableEdges = customizableEdges11;
+            txtCategory.CustomizableEdges = customizableEdges3;
             txtCategory.DrawMode = DrawMode.OwnerDrawFixed;
             txtCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             txtCategory.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -115,16 +118,18 @@
             txtCategory.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtCategory.ForeColor = Color.Black;
             txtCategory.ItemHeight = 30;
+            txtCategory.Items.AddRange(new object[] { "Breakfast", "Sandwiches and Wraps", "Salads" });
             txtCategory.Location = new Point(223, 168);
             txtCategory.Name = "txtCategory";
-            txtCategory.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtCategory.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtCategory.Size = new Size(335, 36);
             txtCategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtCategory.TabIndex = 5;
+            txtCategory.SelectedIndexChanged += txtCategory_SelectedIndexChanged;
             // 
             // txtItemName
             // 
-            txtItemName.CustomizableEdges = customizableEdges13;
+            txtItemName.CustomizableEdges = customizableEdges5;
             txtItemName.DefaultText = "";
             txtItemName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtItemName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -140,14 +145,14 @@
             txtItemName.PasswordChar = '\0';
             txtItemName.PlaceholderText = "";
             txtItemName.SelectedText = "";
-            txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtItemName.Size = new Size(335, 36);
             txtItemName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtItemName.TabIndex = 6;
             // 
             // txtPrice
             // 
-            txtPrice.CustomizableEdges = customizableEdges15;
+            txtPrice.CustomizableEdges = customizableEdges7;
             txtPrice.DefaultText = "";
             txtPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -163,11 +168,16 @@
             txtPrice.PasswordChar = '\0';
             txtPrice.PlaceholderText = "";
             txtPrice.SelectedText = "";
-            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPrice.Size = new Size(335, 36);
             txtPrice.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtPrice.TabIndex = 7;
             txtPrice.TextChanged += guna2TextBox2_TextChanged;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 30;
+            guna2Elipse1.TargetControl = this;
             // 
             // UC_Additems
             // 
@@ -184,6 +194,7 @@
             Controls.Add(label1);
             Name = "UC_Additems";
             Size = new Size(781, 514);
+            Leave += UC_Additems_Leave;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,5 +209,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtCategory;
         private Guna.UI2.WinForms.Guna2TextBox txtItemName;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

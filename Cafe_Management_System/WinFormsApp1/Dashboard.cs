@@ -57,5 +57,16 @@ namespace WinFormsApp1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        private void btnAddItems_Click(object sender, EventArgs e)
+        {
+            uC_Additems1.Visible = true;
+            uC_Additems1.BringToFront();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            uC_Additems1.Visible=false;
+        }
     }
 }

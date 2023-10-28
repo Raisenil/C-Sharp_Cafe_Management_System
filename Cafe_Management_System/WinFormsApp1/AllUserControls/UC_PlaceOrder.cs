@@ -46,9 +46,24 @@ namespace CafeManagement.AllUserControls
 
         private void comboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
             String category = comboCategory.Text;
             string query = "select name from items where category ='" + category + "' ";
+            shoItemList(query);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            String category = comboCategory.Text;
+            string query = "select name from items where category ='" + category + "' and name like '%" + txtSearch.Text + "%' ";
+            shoItemList(query);
+
+        }
+
+        private void shoItemList(String query)
+        {
+            listBox1.Items.Clear();
+
             DataSet ds = fn.GetData(query);
 
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -56,7 +71,5 @@ namespace CafeManagement.AllUserControls
                 listBox1.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
         }
-
-
     }
 }

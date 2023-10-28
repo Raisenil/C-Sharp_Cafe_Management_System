@@ -49,6 +49,7 @@
             btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            uC_AddCategories1 = new CafeManagement.AllUserControls.UC_AddCategories();
             uC_PlaceOrder1 = new CafeManagement.AllUserControls.UC_PlaceOrder();
             uC_Additems1 = new CafeManagement.AllUserControls.UC_Additems();
             uC_Welcome1 = new CafeManagement.AllUserControls.UC_Welcome();
@@ -60,7 +61,6 @@
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            uC_AddCategories1 = new CafeManagement.AllUserControls.UC_AddCategories();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -100,7 +100,7 @@
             btnAddCategories.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnAddCategories.Size = new Size(202, 41);
             btnAddCategories.TabIndex = 8;
-            btnAddCategories.Text = "Add Categories";
+            btnAddCategories.Text = "Categories";
             btnAddCategories.Click += guna2Button1_Click;
             // 
             // btnLogOut
@@ -232,6 +232,14 @@
             panel2.Size = new Size(781, 514);
             panel2.TabIndex = 1;
             // 
+            // uC_AddCategories1
+            // 
+            uC_AddCategories1.BackColor = Color.White;
+            uC_AddCategories1.Location = new Point(0, 0);
+            uC_AddCategories1.Name = "uC_AddCategories1";
+            uC_AddCategories1.Size = new Size(781, 514);
+            uC_AddCategories1.TabIndex = 2;
+            // 
             // uC_PlaceOrder1
             // 
             uC_PlaceOrder1.BackColor = Color.White;
@@ -293,14 +301,6 @@
             // 
             guna2Elipse8.BorderRadius = 30;
             guna2Elipse8.TargetControl = panel2;
-            // 
-            // uC_AddCategories1
-            // 
-            uC_AddCategories1.BackColor = Color.White;
-            uC_AddCategories1.Location = new Point(0, 0);
-            uC_AddCategories1.Name = "uC_AddCategories1";
-            uC_AddCategories1.Size = new Size(781, 514);
-            uC_AddCategories1.TabIndex = 2;
             // 
             // Dashboard
             // 

@@ -22,7 +22,7 @@ namespace CafeManagement.AllUserControls
 
         private void btnAddItems_Click(object sender, EventArgs e)
         {
-            query = "insert into categories (category) values ('"+txtCategoryName.Text+"')";
+            query = "insert into categories (category) values ('" + txtCategoryName.Text + "')";
             fn.setData(query);
             clearAll();
         }
@@ -35,6 +35,15 @@ namespace CafeManagement.AllUserControls
         private void UC_AddCategories_Leave(object sender, EventArgs e)
         {
             clearAll();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

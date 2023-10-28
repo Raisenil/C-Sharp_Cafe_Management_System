@@ -149,6 +149,7 @@
             txtSearch.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtSearch.TabIndex = 3;
             txtSearch.TextAlign = HorizontalAlignment.Center;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // listBox1
             // 
@@ -157,7 +158,7 @@
             listBox1.ItemHeight = 20;
             listBox1.Location = new Point(28, 212);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(143, 264);
+            listBox1.Size = new Size(147, 264);
             listBox1.TabIndex = 4;
             // 
             // label3

@@ -24,6 +24,7 @@ namespace WinFormsApp1
             if (user == "Guest")
             {
                 btnPlaceOrder.Show();
+                btnAddCategories.Hide();
                 btnAddItems.Hide();
                 btnUpdate.Hide();
                 btnRemove.Hide();
@@ -31,6 +32,7 @@ namespace WinFormsApp1
             else if (user == "Admin")
             {
                 btnPlaceOrder.Show();
+                btnAddCategories.Show();
                 btnAddItems.Show();
                 btnUpdate.Show();
                 btnRemove.Show();
@@ -69,8 +71,15 @@ namespace WinFormsApp1
         private void Dashboard_Load(object sender, EventArgs e)
         {
             uC_Additems1.Visible = false;
+            uC_AddCategories1.Visible = false;
             uC_PlaceOrder1.Visible = false;
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            uC_AddCategories1.Visible = true;
+            uC_AddCategories1.BringToFront();
         }
     }
 }

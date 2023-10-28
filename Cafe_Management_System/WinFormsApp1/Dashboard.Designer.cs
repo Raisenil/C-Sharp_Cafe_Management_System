@@ -38,7 +38,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            btnAddCategories = new Guna.UI2.WinForms.Guna2Button();
             btnLogOut = new LinkLabel();
             btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             btnRemove = new Guna.UI2.WinForms.Guna2Button();
@@ -46,6 +49,7 @@
             btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            uC_PlaceOrder1 = new CafeManagement.AllUserControls.UC_PlaceOrder();
             uC_Additems1 = new CafeManagement.AllUserControls.UC_Additems();
             uC_Welcome1 = new CafeManagement.AllUserControls.UC_Welcome();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -55,7 +59,8 @@
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            uC_PlaceOrder1 = new CafeManagement.AllUserControls.UC_PlaceOrder();
+            guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            uC_AddCategories1 = new CafeManagement.AllUserControls.UC_AddCategories();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -63,6 +68,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 118, 225);
+            panel1.Controls.Add(btnAddCategories);
             panel1.Controls.Add(btnLogOut);
             panel1.Controls.Add(btnExit);
             panel1.Controls.Add(btnRemove);
@@ -74,6 +80,28 @@
             panel1.Size = new Size(200, 514);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnAddCategories
+            // 
+            btnAddCategories.BorderRadius = 15;
+            btnAddCategories.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            btnAddCategories.CheckedState.FillColor = Color.White;
+            btnAddCategories.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
+            btnAddCategories.CustomizableEdges = customizableEdges1;
+            btnAddCategories.DisabledState.BorderColor = Color.DarkGray;
+            btnAddCategories.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddCategories.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddCategories.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddCategories.FillColor = Color.FromArgb(0, 118, 225);
+            btnAddCategories.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddCategories.ForeColor = Color.White;
+            btnAddCategories.Location = new Point(31, 173);
+            btnAddCategories.Name = "btnAddCategories";
+            btnAddCategories.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAddCategories.Size = new Size(202, 41);
+            btnAddCategories.TabIndex = 8;
+            btnAddCategories.Text = "Add Categories";
+            btnAddCategories.Click += guna2Button1_Click;
             // 
             // btnLogOut
             // 
@@ -99,7 +127,7 @@
             btnExit.ForeColor = Color.White;
             btnExit.Location = new Point(3, 3);
             btnExit.Name = "btnExit";
-            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnExit.Size = new Size(40, 34);
             btnExit.TabIndex = 4;
@@ -112,7 +140,7 @@
             btnRemove.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnRemove.CheckedState.FillColor = Color.White;
             btnRemove.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
-            btnRemove.CustomizableEdges = customizableEdges2;
+            btnRemove.CustomizableEdges = customizableEdges4;
             btnRemove.DisabledState.BorderColor = Color.DarkGray;
             btnRemove.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRemove.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -120,9 +148,9 @@
             btnRemove.FillColor = Color.FromArgb(0, 118, 225);
             btnRemove.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnRemove.ForeColor = Color.White;
-            btnRemove.Location = new Point(31, 312);
+            btnRemove.Location = new Point(31, 365);
             btnRemove.Name = "btnRemove";
-            btnRemove.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnRemove.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnRemove.Size = new Size(202, 41);
             btnRemove.TabIndex = 3;
             btnRemove.Text = "Remove Itmes";
@@ -133,7 +161,7 @@
             btnAddItems.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnAddItems.CheckedState.FillColor = Color.White;
             btnAddItems.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
-            btnAddItems.CustomizableEdges = customizableEdges4;
+            btnAddItems.CustomizableEdges = customizableEdges6;
             btnAddItems.DisabledState.BorderColor = Color.DarkGray;
             btnAddItems.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddItems.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -141,9 +169,9 @@
             btnAddItems.FillColor = Color.FromArgb(0, 118, 225);
             btnAddItems.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddItems.ForeColor = Color.White;
-            btnAddItems.Location = new Point(31, 180);
+            btnAddItems.Location = new Point(31, 233);
             btnAddItems.Name = "btnAddItems";
-            btnAddItems.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnAddItems.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnAddItems.Size = new Size(202, 41);
             btnAddItems.TabIndex = 2;
             btnAddItems.Text = "Add Items";
@@ -155,7 +183,7 @@
             btnUpdate.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnUpdate.CheckedState.FillColor = Color.White;
             btnUpdate.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
-            btnUpdate.CustomizableEdges = customizableEdges6;
+            btnUpdate.CustomizableEdges = customizableEdges8;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;
             btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -163,9 +191,9 @@
             btnUpdate.FillColor = Color.FromArgb(0, 118, 225);
             btnUpdate.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(31, 246);
+            btnUpdate.Location = new Point(31, 299);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnUpdate.Size = new Size(202, 41);
             btnUpdate.TabIndex = 1;
             btnUpdate.Text = "Update Item";
@@ -176,7 +204,7 @@
             btnPlaceOrder.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnPlaceOrder.CheckedState.FillColor = Color.White;
             btnPlaceOrder.CheckedState.ForeColor = Color.FromArgb(0, 118, 225);
-            btnPlaceOrder.CustomizableEdges = customizableEdges8;
+            btnPlaceOrder.CustomizableEdges = customizableEdges10;
             btnPlaceOrder.DisabledState.BorderColor = Color.DarkGray;
             btnPlaceOrder.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPlaceOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -186,7 +214,7 @@
             btnPlaceOrder.ForeColor = Color.White;
             btnPlaceOrder.Location = new Point(31, 114);
             btnPlaceOrder.Name = "btnPlaceOrder";
-            btnPlaceOrder.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnPlaceOrder.ShadowDecoration.CustomizableEdges = customizableEdges11;
             btnPlaceOrder.Size = new Size(202, 41);
             btnPlaceOrder.TabIndex = 0;
             btnPlaceOrder.Text = "Place Order";
@@ -195,6 +223,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(uC_AddCategories1);
             panel2.Controls.Add(uC_PlaceOrder1);
             panel2.Controls.Add(uC_Additems1);
             panel2.Controls.Add(uC_Welcome1);
@@ -202,6 +231,15 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(781, 514);
             panel2.TabIndex = 1;
+            // 
+            // uC_PlaceOrder1
+            // 
+            uC_PlaceOrder1.BackColor = Color.White;
+            uC_PlaceOrder1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            uC_PlaceOrder1.Location = new Point(0, 0);
+            uC_PlaceOrder1.Name = "uC_PlaceOrder1";
+            uC_PlaceOrder1.Size = new Size(781, 514);
+            uC_PlaceOrder1.TabIndex = 8;
             // 
             // uC_Additems1
             // 
@@ -251,13 +289,18 @@
             guna2Elipse7.BorderRadius = 30;
             guna2Elipse7.TargetControl = panel2;
             // 
-            // uC_PlaceOrder1
+            // guna2Elipse8
             // 
-            uC_PlaceOrder1.BackColor = Color.White;
-            uC_PlaceOrder1.Location = new Point(0, 0);
-            uC_PlaceOrder1.Name = "uC_PlaceOrder1";
-            uC_PlaceOrder1.Size = new Size(781, 514);
-            uC_PlaceOrder1.TabIndex = 8;
+            guna2Elipse8.BorderRadius = 30;
+            guna2Elipse8.TargetControl = panel2;
+            // 
+            // uC_AddCategories1
+            // 
+            uC_AddCategories1.BackColor = Color.White;
+            uC_AddCategories1.Location = new Point(0, 0);
+            uC_AddCategories1.Name = "uC_AddCategories1";
+            uC_AddCategories1.Size = new Size(781, 514);
+            uC_AddCategories1.TabIndex = 2;
             // 
             // Dashboard
             // 
@@ -283,7 +326,6 @@
         private Panel panel1;
         private Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnRemove;
-        private Guna.UI2.WinForms.Guna2Button btnAddItems;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnPlaceOrder;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
@@ -298,5 +340,9 @@
         private CafeManagement.AllUserControls.UC_Additems uC_Additems1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
         private CafeManagement.AllUserControls.UC_PlaceOrder uC_PlaceOrder1;
+        private Guna.UI2.WinForms.Guna2Button btnAddCategories;
+        private Guna.UI2.WinForms.Guna2Button btnAddItems;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
+        private CafeManagement.AllUserControls.UC_AddCategories uC_AddCategories1;
     }
 }

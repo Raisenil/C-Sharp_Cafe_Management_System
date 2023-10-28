@@ -416,6 +416,7 @@
             btnPrint.Size = new Size(148, 45);
             btnPrint.TabIndex = 17;
             btnPrint.Text = "Print";
+            btnPrint.Click += btnPrint_Click;
             // 
             // label7
             // 

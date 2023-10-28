@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DGVPrinterHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -131,6 +132,25 @@ namespace CafeManagement.AllUserControls
             }
             catch { }
             total -= amount;
+            labelTotalAmount.Text = "$ " + total;
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter Printer = new DGVPrinter();
+            Printer.Title = "Customer Bill";
+            Printer.SubTitle = string.Format("Date; {0}", DateTime.Now.Date);
+            Printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            Printer.PageNumbers = true;
+            Printer.PageNumberInHeader = false;
+            Printer.PorportionalColumns = true;
+            Printer.HeaderCellAlignment = StringAlignment.Near;
+            Printer.Footer = "Total Payable Amount : " + labelTotalAmount.Text;
+            Printer.FooterSpacing = 15;
+            Printer.PrintDataGridView(guna2DataGridView1);
+
+            total = 0;
+            guna2DataGridView1.Rows.Clear();
             labelTotalAmount.Text = "$ " + total;
         }
     }

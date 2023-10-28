@@ -4,6 +4,9 @@
     <Compile Update="AllUserControls\UC_Additems.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="AllUserControls\UC_PlaceOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="AllUserControls\UC_Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>

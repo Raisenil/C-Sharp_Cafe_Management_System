@@ -44,6 +44,8 @@ namespace WinFormsApp1
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
+            uC_PlaceOrder1.Visible = true;
+            uC_PlaceOrder1.BringToFront();
 
         }
 
@@ -66,7 +68,9 @@ namespace WinFormsApp1
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            uC_Additems1.Visible=false;
+            uC_Additems1.Visible = false;
+            uC_PlaceOrder1.Visible = false;
+
         }
     }
 }

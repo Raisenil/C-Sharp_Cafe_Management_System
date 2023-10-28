@@ -23,16 +23,6 @@ namespace CafeManagement.AllUserControls
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void UC_PlaceOrder_Load(object sender, EventArgs e)
         {
             string query = "select category from categories";
@@ -53,7 +43,7 @@ namespace CafeManagement.AllUserControls
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            
+
             String category = comboCategory.Text;
             string query = "select name from items where category ='" + category + "' and name like '%" + txtSearch.Text + "%' ";
             shoItemList(query);
@@ -70,6 +60,78 @@ namespace CafeManagement.AllUserControls
             {
                 listBox1.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtQuantity.ResetText();
+            txtTotal.Clear();
+
+            String text = listBox1.GetItemText(listBox1.SelectedItem);
+            txtItemName.Text = text;
+            query = "select price from items where name = '" + text + "'";
+            DataSet ds = fn.GetData(query);
+
+
+            try
+            {
+                txtPrice.Text = ds.Tables[0].Rows[0][0].ToString();
+            }
+            catch
+            { }
+
+        }
+
+        private void txtQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            Int64 quan = Int64.Parse(txtQuantity.Value.ToString());
+            Int64 price = Int64.Parse(txtPrice.Text);
+            txtTotal.Text = (quan * price).ToString();
+        }
+
+        protected int n, total = 0;
+
+        private void btnAddtoCart_Click(object sender, EventArgs e)
+        {
+            if (txtTotal.Text != "0" && txtTotal.Text != "")
+            {
+                n = guna2DataGridView1.Rows.Add();
+                guna2DataGridView1.Rows[n].Cells[0].Value = txtItemName.Text;
+                guna2DataGridView1.Rows[n].Cells[1].Value = txtPrice.Text;
+                guna2DataGridView1.Rows[n].Cells[2].Value = txtQuantity.Text;
+                guna2DataGridView1.Rows[n].Cells[3].Value = txtTotal.Text;
+
+                total += int.Parse(txtTotal.Text);
+                labelTotalAmount.Text = "$ " + total;
+            }
+            else
+            {
+                MessageBox.Show("Minimum Quantuty need to be 1", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        int amount;
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                amount = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                guna2DataGridView1.Rows.RemoveAt(this.guna2DataGridView1.SelectedRows[0].Index);
+            }
+            catch { }
+            total -= amount;
+            labelTotalAmount.Text = "$ " + total;
         }
     }
 }

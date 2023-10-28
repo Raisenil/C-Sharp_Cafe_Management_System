@@ -93,7 +93,6 @@
             label1.Size = new Size(147, 32);
             label1.TabIndex = 0;
             label1.Text = "Place Order";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -104,7 +103,6 @@
             label2.Size = new Size(73, 20);
             label2.TabIndex = 1;
             label2.Text = "Category";
-            label2.Click += label2_Click;
             // 
             // comboCategory
             // 
@@ -160,6 +158,7 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(147, 264);
             listBox1.TabIndex = 4;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -211,6 +210,7 @@
             txtItemName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtItemName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtItemName.ForeColor = Color.Black;
             txtItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemName.Location = new Point(296, 93);
             txtItemName.Margin = new Padding(3, 4, 3, 4);
@@ -233,6 +233,7 @@
             txtTotal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtTotal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTotal.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTotal.ForeColor = Color.Black;
             txtTotal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTotal.Location = new Point(549, 163);
             txtTotal.Margin = new Padding(3, 4, 3, 4);
@@ -255,6 +256,7 @@
             txtPrice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPrice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPrice.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPrice.ForeColor = Color.Black;
             txtPrice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPrice.Location = new Point(549, 93);
             txtPrice.Margin = new Padding(3, 4, 3, 4);
@@ -277,11 +279,11 @@
             txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtQuantity.Size = new Size(200, 36);
             txtQuantity.TabIndex = 13;
+            txtQuantity.ValueChanged += txtQuantity_ValueChanged;
             // 
             // btnAddtoCart
             // 
             btnAddtoCart.BorderRadius = 21;
-            btnAddtoCart.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             btnAddtoCart.CheckedState.FillColor = Color.White;
             btnAddtoCart.CheckedState.ForeColor = Color.FromArgb(0, 11, 225);
             btnAddtoCart.CustomizableEdges = customizableEdges5;
@@ -298,6 +300,7 @@
             btnAddtoCart.Size = new Size(180, 45);
             btnAddtoCart.TabIndex = 14;
             btnAddtoCart.Text = "Add to Cart";
+            btnAddtoCart.Click += btnAddtoCart_Click;
             // 
             // guna2DataGridView1
             // 
@@ -351,6 +354,7 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            guna2DataGridView1.CellClick += guna2DataGridView1_CellClick;
             // 
             // Column1
             // 
@@ -375,7 +379,6 @@
             // btnRemove
             // 
             btnRemove.BorderRadius = 21;
-            btnRemove.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             btnRemove.CheckedState.FillColor = Color.White;
             btnRemove.CheckedState.ForeColor = Color.FromArgb(0, 11, 225);
             btnRemove.CustomizableEdges = customizableEdges3;
@@ -392,11 +395,11 @@
             btnRemove.Size = new Size(148, 45);
             btnRemove.TabIndex = 16;
             btnRemove.Text = "Remove";
+            btnRemove.Click += btnRemove_Click;
             // 
             // btnPrint
             // 
             btnPrint.BorderRadius = 21;
-            btnPrint.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             btnPrint.CheckedState.FillColor = Color.White;
             btnPrint.CheckedState.ForeColor = Color.FromArgb(0, 11, 225);
             btnPrint.CustomizableEdges = customizableEdges1;

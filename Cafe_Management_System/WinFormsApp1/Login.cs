@@ -1,7 +1,14 @@
+using CafeManagement;
+using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace WinFormsApp1
 {
     public partial class Login : Form
     {
+        function fn = new function();
+        String query;
+
         public Login()
         {
             InitializeComponent();
@@ -28,18 +35,33 @@ namespace WinFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "Admin" && txtPassword.Text == "admin")
+            String username = txtUsername.Text;
+            String password = txtPassword.Text;
+            if (!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
             {
-                Dashboard ds = new Dashboard("Admin");
-                ds.Show();
-                this.Hide();
+                string query = "select * from users where username ='" + username + "' And password = '"+ password +"'";
+                DataSet ds = fn.GetData(query);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    Dashboard das = new Dashboard("Admin");
+                    das.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid User Info.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid User.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnGuest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Dashboard ds = new Dashboard("Guest");
-            ds.Show();
+            Dashboard das = new Dashboard("Guest");
+            das.Show();
             this.Hide();
         }
     }

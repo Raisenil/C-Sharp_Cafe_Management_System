@@ -118,7 +118,6 @@
             txtCategory.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtCategory.ForeColor = Color.Black;
             txtCategory.ItemHeight = 30;
-            txtCategory.Items.AddRange(new object[] { "Breakfast", "Sandwiches and Wraps", "Salads" });
             txtCategory.Location = new Point(223, 168);
             txtCategory.Name = "txtCategory";
             txtCategory.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -194,6 +193,7 @@
             Controls.Add(label1);
             Name = "UC_Additems";
             Size = new Size(781, 514);
+            Load += UC_Additems_Load;
             Leave += UC_Additems_Leave;
             ResumeLayout(false);
             PerformLayout();

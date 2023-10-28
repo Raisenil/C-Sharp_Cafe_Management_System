@@ -117,11 +117,10 @@
             comboCategory.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboCategory.ForeColor = Color.Black;
             comboCategory.ItemHeight = 30;
-            comboCategory.Items.AddRange(new object[] { "Breakfast", "Sandwiches and Wraps", "Salads" });
             comboCategory.Location = new Point(28, 97);
             comboCategory.Name = "comboCategory";
             comboCategory.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            comboCategory.Size = new Size(143, 36);
+            comboCategory.Size = new Size(212, 36);
             comboCategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             comboCategory.TabIndex = 2;
             comboCategory.TextAlign = HorizontalAlignment.Center;
@@ -146,25 +145,26 @@
             txtSearch.PlaceholderText = "Search";
             txtSearch.SelectedText = "";
             txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtSearch.Size = new Size(147, 48);
+            txtSearch.Size = new Size(212, 48);
             txtSearch.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtSearch.TabIndex = 3;
             txtSearch.TextAlign = HorizontalAlignment.Center;
             // 
             // listBox1
             // 
+            listBox1.Font = new Font("Segoe UI Symbol", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
+            listBox1.ItemHeight = 20;
             listBox1.Location = new Point(28, 212);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(143, 274);
+            listBox1.Size = new Size(143, 264);
             listBox1.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(247, 137);
+            label3.Location = new Point(296, 137);
             label3.Name = "label3";
             label3.Size = new Size(70, 20);
             label3.TabIndex = 5;
@@ -174,7 +174,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(247, 69);
+            label4.Location = new Point(296, 69);
             label4.Name = "label4";
             label4.Size = new Size(88, 20);
             label4.TabIndex = 6;
@@ -184,7 +184,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(500, 69);
+            label5.Location = new Point(549, 69);
             label5.Name = "label5";
             label5.Size = new Size(43, 20);
             label5.TabIndex = 7;
@@ -194,7 +194,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(500, 137);
+            label6.Location = new Point(549, 137);
             label6.Name = "label6";
             label6.Size = new Size(44, 20);
             label6.TabIndex = 8;
@@ -211,7 +211,7 @@
             txtItemName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtItemName.Location = new Point(247, 93);
+            txtItemName.Location = new Point(296, 93);
             txtItemName.Margin = new Padding(3, 4, 3, 4);
             txtItemName.Name = "txtItemName";
             txtItemName.PasswordChar = '\0';
@@ -233,7 +233,7 @@
             txtTotal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTotal.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtTotal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTotal.Location = new Point(500, 163);
+            txtTotal.Location = new Point(549, 163);
             txtTotal.Margin = new Padding(3, 4, 3, 4);
             txtTotal.Name = "txtTotal";
             txtTotal.PasswordChar = '\0';
@@ -255,7 +255,7 @@
             txtPrice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPrice.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtPrice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPrice.Location = new Point(500, 93);
+            txtPrice.Location = new Point(549, 93);
             txtPrice.Margin = new Padding(3, 4, 3, 4);
             txtPrice.Name = "txtPrice";
             txtPrice.PasswordChar = '\0';
@@ -271,7 +271,7 @@
             txtQuantity.BackColor = Color.Transparent;
             txtQuantity.CustomizableEdges = customizableEdges7;
             txtQuantity.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtQuantity.Location = new Point(247, 163);
+            txtQuantity.Location = new Point(296, 163);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtQuantity.Size = new Size(200, 36);
@@ -291,7 +291,7 @@
             btnAddtoCart.FillColor = Color.FromArgb(0, 118, 225);
             btnAddtoCart.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddtoCart.ForeColor = Color.White;
-            btnAddtoCart.Location = new Point(520, 212);
+            btnAddtoCart.Location = new Point(569, 212);
             btnAddtoCart.Name = "btnAddtoCart";
             btnAddtoCart.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnAddtoCart.Size = new Size(180, 45);
@@ -461,6 +461,7 @@
             Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "UC_PlaceOrder";
             Size = new Size(781, 514);
+            Load += UC_PlaceOrder_Load;
             ((System.ComponentModel.ISupportInitialize)txtQuantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);

@@ -48,5 +48,16 @@ namespace CafeManagement.AllUserControls
         {
 
         }
+
+        private void UC_Additems_Load(object sender, EventArgs e)
+        {
+            string query = "select category from categories";
+            DataSet ds = fn.GetData(query);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                txtCategory.Items.Add(ds.Tables[0].Rows[i][0].ToString());
+            }
+        }
     }
 }

@@ -467,6 +467,7 @@
             Name = "UC_PlaceOrder";
             Size = new Size(781, 514);
             Load += UC_PlaceOrder_Load;
+            Leave += UC_PlaceOrder_Leave;
             ((System.ComponentModel.ISupportInitialize)txtQuantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);

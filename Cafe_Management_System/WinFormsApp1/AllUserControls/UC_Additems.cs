@@ -59,5 +59,10 @@ namespace CafeManagement.AllUserControls
                 txtCategory.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
         }
+
+        private void txtItemName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

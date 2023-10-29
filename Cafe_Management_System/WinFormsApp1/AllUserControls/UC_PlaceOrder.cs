@@ -44,7 +44,6 @@ namespace CafeManagement.AllUserControls
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
             String category = comboCategory.Text;
             string query = "select name from items where category ='" + category + "' and name like '%" + txtSearch.Text + "%' ";
             shoItemList(query);
@@ -152,6 +151,20 @@ namespace CafeManagement.AllUserControls
             total = 0;
             guna2DataGridView1.Rows.Clear();
             labelTotalAmount.Text = "$ " + total;
+        }
+
+        public void clearAll()
+        {
+            comboCategory.SelectedIndex = -1;
+            txtSearch.Clear();
+            txtItemName.Clear();
+            txtPrice.Clear();
+            txtTotal.Clear();
+        }
+
+        private void UC_PlaceOrder_Leave(object sender, EventArgs e)
+        {
+            clearAll();
         }
     }
 }

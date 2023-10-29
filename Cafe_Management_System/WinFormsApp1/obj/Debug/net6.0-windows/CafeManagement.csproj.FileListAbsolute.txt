@@ -31,3 +31,4 @@ D:\Study\C#\C-Sharp_Cafe_Management_System\Cafe_Management_System\WinFormsApp1\b
 D:\Study\C#\C-Sharp_Cafe_Management_System\Cafe_Management_System\WinFormsApp1\obj\Debug\net6.0-windows\CafeManagement.AllUserControls.UC_Additems.resources
 D:\Study\C#\C-Sharp_Cafe_Management_System\Cafe_Management_System\WinFormsApp1\obj\Debug\net6.0-windows\CafeManagement.AllUserControls.UC_PlaceOrder.resources
 D:\Study\C#\C-Sharp_Cafe_Management_System\Cafe_Management_System\WinFormsApp1\obj\Debug\net6.0-windows\CafeManagement.AllUserControls.UC_AddCategories.resources
+D:\Study\C#\C-Sharp_Cafe_Management_System\Cafe_Management_System\WinFormsApp1\obj\Debug\net6.0-windows\CafeManagement.AllUserControls.UC_UpdateItems.resources

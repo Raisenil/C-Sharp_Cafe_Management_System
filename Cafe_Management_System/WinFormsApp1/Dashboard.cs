@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeManagement.AllUserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -73,13 +74,19 @@ namespace WinFormsApp1
             uC_Additems1.Visible = false;
             uC_AddCategories1.Visible = false;
             uC_PlaceOrder1.Visible = false;
-
+            uC_UpdateItems1.Visible = false;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             uC_AddCategories1.Visible = true;
             uC_AddCategories1.BringToFront();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            uC_UpdateItems1.Visible = true;
+            uC_UpdateItems1.BringToFront();
         }
     }
 }

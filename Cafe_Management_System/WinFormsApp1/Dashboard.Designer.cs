@@ -61,6 +61,8 @@
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            uC_UpdateItems1 = new CafeManagement.AllUserControls.UC_UpdateItems();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -197,6 +199,7 @@
             btnUpdate.Size = new Size(202, 41);
             btnUpdate.TabIndex = 1;
             btnUpdate.Text = "Update Item";
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnPlaceOrder
             // 
@@ -223,6 +226,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(uC_UpdateItems1);
             panel2.Controls.Add(uC_AddCategories1);
             panel2.Controls.Add(uC_PlaceOrder1);
             panel2.Controls.Add(uC_Additems1);
@@ -302,6 +306,19 @@
             guna2Elipse8.BorderRadius = 30;
             guna2Elipse8.TargetControl = panel2;
             // 
+            // guna2Elipse9
+            // 
+            guna2Elipse9.BorderRadius = 30;
+            guna2Elipse9.TargetControl = panel2;
+            // 
+            // uC_UpdateItems1
+            // 
+            uC_UpdateItems1.BackColor = Color.White;
+            uC_UpdateItems1.Location = new Point(0, 0);
+            uC_UpdateItems1.Name = "uC_UpdateItems1";
+            uC_UpdateItems1.Size = new Size(781, 514);
+            uC_UpdateItems1.TabIndex = 2;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -344,5 +361,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAddItems;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
         private CafeManagement.AllUserControls.UC_AddCategories uC_AddCategories1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
+        private CafeManagement.AllUserControls.UC_UpdateItems uC_UpdateItems1;
     }
 }

@@ -148,6 +148,7 @@
             txtItemName.Size = new Size(335, 36);
             txtItemName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtItemName.TabIndex = 6;
+            txtItemName.TextChanged += txtItemName_TextChanged;
             // 
             // txtPrice
             // 

@@ -75,6 +75,8 @@ namespace WinFormsApp1
             uC_AddCategories1.Visible = false;
             uC_PlaceOrder1.Visible = false;
             uC_UpdateItems1.Visible = false;
+            uC_RemoveItem1.Visible = false;
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -87,6 +89,12 @@ namespace WinFormsApp1
         {
             uC_UpdateItems1.Visible = true;
             uC_UpdateItems1.BringToFront();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            uC_RemoveItem1.Visible = true;
+            uC_RemoveItem1.BringToFront();
         }
     }
 }

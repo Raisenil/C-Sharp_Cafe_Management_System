@@ -10,6 +10,9 @@
     <Compile Update="AllUserControls\UC_PlaceOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="AllUserControls\UC_RemoveItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="AllUserControls\UC_UpdateItems.cs">
       <SubType>UserControl</SubType>
     </Compile>

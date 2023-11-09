@@ -59,5 +59,10 @@ namespace CafeManagement.AllUserControls
         {
 
         }
+
+        private void txtCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

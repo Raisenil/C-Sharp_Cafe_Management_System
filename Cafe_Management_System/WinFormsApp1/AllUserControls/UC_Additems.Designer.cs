@@ -124,6 +124,7 @@
             txtCategory.Size = new Size(335, 36);
             txtCategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             txtCategory.TabIndex = 5;
+            txtCategory.SelectedIndexChanged += txtCategory_SelectedIndexChanged;
             // 
             // txtItemName
             // 

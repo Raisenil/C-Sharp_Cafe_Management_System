@@ -276,6 +276,7 @@
             btnUpdated.Size = new Size(180, 45);
             btnUpdated.TabIndex = 11;
             btnUpdated.Text = "Update";
+            btnUpdated.Click += btnUpdated_Click;
             // 
             // UC_UpdateItems
             // 

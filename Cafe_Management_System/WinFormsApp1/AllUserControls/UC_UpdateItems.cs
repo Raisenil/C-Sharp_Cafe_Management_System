@@ -45,11 +45,22 @@ namespace CafeManagement.AllUserControls
             id = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             String category = guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             String name = guna2DataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            int price = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[3 ].Value.ToString());
+            int price = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
 
             txtCategory.Text = category;
             txtName.Text = name;
             txtPrice.Text = price.ToString();
+        }
+
+        private void btnUpdated_Click(object sender, EventArgs e)
+        {
+            query = "update items set name='" + txtName.Text + "',category='"+txtCategory.Text+ "', price='"+txtPrice.Text+"' where id = "+id+"";
+            fn.setData(query);
+            loadData();
+
+            txtName.Clear();
+            txtCategory.Clear();
+            txtPrice.Clear();
         }
     }
 }

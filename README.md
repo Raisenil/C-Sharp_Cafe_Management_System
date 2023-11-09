@@ -80,7 +80,7 @@ Guest users can browse the menu, select items, and place orders without the need
 
 After placing an order, guest users can print a receipt for their records.
 
-![print](Images/Print.png)
+![print](Images/print.png)
 
 ## 4. Admin User Features
 
@@ -94,11 +94,11 @@ Admin users can place orders similar to guest users, with additional administrat
 
 Admin users can print receipts for orders they have placed.
 
-![print](Images/Print.png)
+![print](Images/print.png)
 
 ### 4.3 Manage Categories
 
-![print](Images/category.png)
+![category](Images/category.png)
 
 #### 4.3.1 Add Category
 
@@ -118,19 +118,19 @@ Admin users can delete categories from the system.
 
 Admin users can add new items to the menu.
 
-![print](Images/Add_New_item.png)
+![Add_New_item](Images/Add_New_item.png)
 
 #### 4.4.2 Update Item
 
 Admin users can update existing item information.
 
-![print](Images/Update_item.png)
+![Update_item](Images/Update_item.png)
 
 #### 4.4.3 Delete Item
 
 Admin users can delete items from the system.
 
-![print](Images/Delete_item.png)
+![Delete_item](Images/Delete_item.png)
 
 ## 5. Technology Stack
 

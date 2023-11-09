@@ -44,11 +44,6 @@ namespace CafeManagement.AllUserControls
             clearAll();
         }
 
-        private void txtCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void UC_Additems_Load(object sender, EventArgs e)
         {
             string query = "select category from categories";

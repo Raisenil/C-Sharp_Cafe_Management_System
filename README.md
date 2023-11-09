@@ -130,7 +130,7 @@ Admin users can update existing item information.
 
 Admin users can delete items from the system.
 
-![Delete_item](Images/Delete_item.png)
+![Delete_item](Images/Delete_Item.png)
 
 ## 5. Technology Stack
 

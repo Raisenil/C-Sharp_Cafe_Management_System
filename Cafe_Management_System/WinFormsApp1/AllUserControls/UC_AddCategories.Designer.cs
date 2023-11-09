@@ -47,12 +47,11 @@
             label2 = new Label();
             label1 = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             btnRemove = new Guna.UI2.WinForms.Guna2Button();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtEditCategory = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -123,26 +122,27 @@
             guna2Elipse1.BorderRadius = 30;
             guna2Elipse1.TargetControl = this;
             // 
-            // btnPrint
+            // btnUpdate
             // 
-            btnPrint.BorderRadius = 21;
-            btnPrint.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            btnPrint.CheckedState.FillColor = Color.White;
-            btnPrint.CheckedState.ForeColor = Color.FromArgb(0, 11, 225);
-            btnPrint.CustomizableEdges = customizableEdges7;
-            btnPrint.DisabledState.BorderColor = Color.DarkGray;
-            btnPrint.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPrint.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPrint.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPrint.FillColor = Color.FromArgb(0, 118, 225);
-            btnPrint.Font = new Font("Segoe UI Symbol", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPrint.ForeColor = Color.White;
-            btnPrint.Location = new Point(43, 333);
-            btnPrint.Name = "btnPrint";
-            btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnPrint.Size = new Size(148, 45);
-            btnPrint.TabIndex = 20;
-            btnPrint.Text = "Edit";
+            btnUpdate.BorderRadius = 21;
+            btnUpdate.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            btnUpdate.CheckedState.FillColor = Color.White;
+            btnUpdate.CheckedState.ForeColor = Color.FromArgb(0, 11, 225);
+            btnUpdate.CustomizableEdges = customizableEdges7;
+            btnUpdate.DisabledState.BorderColor = Color.DarkGray;
+            btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnUpdate.FillColor = Color.FromArgb(0, 118, 225);
+            btnUpdate.Font = new Font("Segoe UI Symbol", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(43, 333);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnUpdate.Size = new Size(148, 45);
+            btnUpdate.TabIndex = 20;
+            btnUpdate.Text = "Edit";
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnRemove
             // 
@@ -164,6 +164,7 @@
             btnRemove.Size = new Size(148, 45);
             btnRemove.TabIndex = 19;
             btnRemove.Text = "Remove";
+            btnRemove.Click += btnRemove_Click;
             // 
             // guna2DataGridView1
             // 
@@ -180,7 +181,6 @@
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 21;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -217,30 +217,31 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            guna2DataGridView1.CellClick += guna2DataGridView1_CellClick;
             // 
-            // guna2TextBox1
+            // txtEditCategory
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(43, 268);
-            guna2TextBox1.Margin = new Padding(4, 4, 4, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(335, 36);
-            guna2TextBox1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            guna2TextBox1.TabIndex = 22;
-            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
+            txtEditCategory.CustomizableEdges = customizableEdges5;
+            txtEditCategory.DefaultText = "";
+            txtEditCategory.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEditCategory.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEditCategory.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEditCategory.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEditCategory.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditCategory.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEditCategory.ForeColor = Color.Black;
+            txtEditCategory.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEditCategory.Location = new Point(43, 268);
+            txtEditCategory.Margin = new Padding(4, 4, 4, 4);
+            txtEditCategory.Name = "txtEditCategory";
+            txtEditCategory.PasswordChar = '\0';
+            txtEditCategory.PlaceholderText = "";
+            txtEditCategory.SelectedText = "";
+            txtEditCategory.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtEditCategory.Size = new Size(335, 36);
+            txtEditCategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            txtEditCategory.TabIndex = 22;
+            txtEditCategory.TextChanged += guna2TextBox1_TextChanged;
             // 
             // label3
             // 
@@ -253,19 +254,14 @@
             label3.Text = "Edit Category";
             label3.Click += label3_Click;
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Category Name";
-            Column1.Name = "Column1";
-            // 
             // UC_AddCategories
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(guna2TextBox1);
+            Controls.Add(txtEditCategory);
             Controls.Add(label3);
-            Controls.Add(btnPrint);
+            Controls.Add(btnUpdate);
             Controls.Add(btnRemove);
             Controls.Add(guna2DataGridView1);
             Controls.Add(txtCategoryName);
@@ -274,6 +270,7 @@
             Controls.Add(label1);
             Name = "UC_AddCategories";
             Size = new Size(781, 514);
+            Load += UC_AddCategories_Load;
             Leave += UC_AddCategories_Leave;
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             ResumeLayout(false);
@@ -287,11 +284,10 @@
         private Label label2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtEditCategory;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnRemove;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private DataGridViewTextBoxColumn Column1;
     }
 }
